@@ -1,0 +1,123 @@
+Addr : DATA R/W	Name
+gSETdefaults
+16352:00011		iSETflight = EEsetPage, 		//  0: sequential flight number <<< Redundant:in cpu data memory
+16353:00210		iSETunit,						//  1: unit serial identifier <<<< Redundant:in cpu data memory
+16354:57344	*c	iSETaccCal_b,					//  2: acceleration calibration offset  (IEEE-32)
+16355:17582	*c	iSETaccCal_b_hi,
+16356:01792	*c	iSETaccCal_m,					//  4: acceleration calibration slope   (IEEE-32)
+16357:15297	*c	iSETaccCal_m_hi,
+16358:00000	*c	iSETaltCal_b,					//  6: altitude calibration offset      (IEEE-32)
+16359:00000	*c	iSETaltCal_b_hi,
+16360:00000	*c	iSETaltCal_m,					//  8: altitude calibration slope       (IEEE-32)
+16361:00000	*c	iSETaltCal_m_hi,
+16362:01493	*	iSETlaunch,						// 10: detect acceleration threshold    (for EVT_acc_gt_threshold)
+16363:00833	*	iSETceiling,					// 11: pressure altitude ceiling        (for EVT_alt_gt_ceiling)
+16364:00083	*	iSETpeak,						// 12: pressure altitude apogee detect  (for EVT_alt_lt_peak)
+16365:01249	*	iSETfloor,						// 13: pressure altitude floor          (for EVT_alt_lt_floor)
+16366:00008	*	iSETlanded,						// 14: velocity lower threshold         (for EVT_vel_lt_threshold)
+16367:00499	*	iSETfalling,					// 15: velocity upper threshold         (for EVT_vel_gt_threshold)
+16368:00000	*	iSETtmrAir,						// 16: air state timeout
+16369:00000	*	iSETtmrPeak,					// 17: peak state timeout
+16370:00000	*	iSETtmrFloor,					// 18: floor state timeout
+16371:00000	*	iSETtmrAux,						// 19: aux fire timeout
+16372:00003		iSETcntAcc,						// 20: acceleration event debounce count
+16373:00004		iSETcntAlt,						// 21: altitude event debounce count
+16374:00002		iSETcntAux,						// 22: aux. switch event debounce count
+16375:00005		iSETcntVel,						// 23: velocity event debounce count
+16376:65535		iSET_24,						// 24: reserved
+16377:65535		iSET_25,						// 25: reserved
+16378:65535		iSET_26,						// 26: flash key
+16379:65535		iSETconfig,						// 27: configuration
+												//		MPXA4115=&h0010
+16380:02218	*	iSETbatt,	V*(4095/12)			// 28: minimum battery voltage at selftest
+16381:04133		iSETvers,						// 29: EE format version identifier 
+16382:12918		iSETkeyLO,						// 30: lo word for EE key
+16383:17229		iSETkeyHI,						// 31: hi word for EE key
+
+
+
+16320:00648		iFLTtmr	= EEfltPage,			//  0: flight timer
+16321:00000		iFLTtmr1,						//  1: event time 1
+16322:00000		iFLTtmr2,						//  2: event time 2
+16323:00000		iFLTtmr3,						//  3: event time 3
+16324:00000		iFLTtmr4,						//  4: event time 4
+16325:00000		iFLTtmr5,						//  5: event time 5
+16326:00000		iFLTtmr6,						//  6: event time 6
+16327:00000		iFLTtmr7,						//  7: event time 7
+16328:00000		iFLTtmr8,						//  8: event time 8
+16329:00000		iFLTtmr9,						//  9: event time 9
+16330:00000		iFLTvdsAir,		V*(4096/12)		// 10: voltage at AIR fire
+16331:00000		iFLTvdsPeak,	V*(4096/12)		// 11: voltage at PEAK fire
+16332:00000		iFLTvdsFloor,	V*(4096/12)		// 12: voltage at FLOOR fire
+16333:00000		iFLTvdsAux,		V*(4096/12)		// 13: voltage at AUX fire
+16334:00000		iFLT_14,						// 14: reserved
+16335:00000		iFLT_15,						// 15: reserved
+16336:58976		iFLTrefAlt,						// 16: launch reference pressure
+16337:33869		iFLTrefAcc,						// 17: launch reference acceleration
+16338:02939		iFLTtemp,						// 18: temperature at launch
+16339:03131		iFLTbatt,		V*(4096/12)		// 19: battery voltage at launch
+16340:32360		iFLTee_beg,	16180 to 16287		// 20: EE byte offset at launch (div 2 for Address)
+16341:03016		iFLTee_end,	wrap to 0 to 1508	// 21: last used EE byte offset (div 4 for samples)
+16342:58928		iFLTpeakAlt,					// 22: peak flight altitude
+16343:00000		iFLTTeeUppers,					// 23: MCv2:reserved, MCv3:upper bytes LSB=gFLTee_beg, MSB=gFLTee_end
+16344:00000		iFLTtimeAir,					// 24: airstart time
+16345:00000		iFLTtimePeak,					// 25: peak fire time
+16346:00000		iFLTtimeFloor,					// 26: floor fire time
+16347:00000		iFLTtimeAux,					// 27: aux fire time
+16348:00000		iFLT_28,						// 28: reserved
+16349:00000		iFLT_29,						// 29: reserved
+16350:00000		iFLT_30,						// 30: reserved
+16351:00000		iFLTnum							// 31: flight number
+
+
+
+gSTATEdefaults
+16288:00033	*	iSTATESevt0	= EEstatesPage,		//  0: launch detect state	
+16289:00002	*	iSTATESevt1,					//  1: event flags, state 1
+16290:00016	*	iSTATESevt2,					//  2: event flags, state 2
+16291:00064	*	iSTATESevt3,					//  3: event flags, state 3
+16292:00128	*	iSTATESevt4,					//  4: event flags, state 4
+16293:00008	*	iSTATESevt5,					//  5: event flags, state 5
+16294:00000	*	iSTATESevt6,					//  6: event flags, state 6
+16295:00000	*	iSTATESevt7,					//  7: event flags, state 7
+16296:00000		iSTATESevt8,					//  8: idle state
+16297:00000		iSTATESevt9,					//  9: unused state
+16298:00000		iSTATEStmr0,					// 10: no timeout for launch detect 
+16299:00000	*	iSTATEStmr1,					// 11: timeout ticks, state 1
+16300:00000	*	iSTATEStmr2,					// 12: timeout ticks, state 2
+16301:00000	*	iSTATEStmr3,					// 13: timeout ticks, state 3
+16302:00000	*	iSTATEStmr4,					// 14: timeout ticks, state 4
+16303:00000	*	iSTATEStmr5,					// 15: timeout ticks, state 5
+16304:00080	*	iSTATEStmr6,					// 16: timeout ticks, state 6
+16305:00080	*	iSTATEStmr7,					// 17: timeout ticks, state 7
+16306:00000		iSTATEStmr8,					// 18: no timeout for idle state
+16307:00000		iSTATEStmr9,					// 19: no timeout for unused state
+16308:04369	*	iSTATESled0,					// 20: led bits for launch detect 
+16309:20480	*	iSTATESled1,					// 21: led bits, state 1
+16310:20560	*	iSTATESled2,					// 22: led bits, state 2
+16311:00007	*	iSTATESled3,					// 23: led bits, state 3
+16312:00119	*	iSTATESled4,					// 24: led bits, state 4
+16313:01911	*	iSTATESled5,					// 25: led bits, state 5
+16314:04095	*	iSTATESled6,					// 26: led bits, state 6
+16315:00000	*	iSTATESled7,					// 27: led bits, state 7
+16316:00000		iSTATESled8,					// 28: no led bits for idle state
+16317:00000		iSTATESled9,					// 29: no idle bits for unused state
+16318:32781	*	iSTATEScheck,					// 30: self-test check flags
+16319:00160	*	iSTATESticks					// 31: self-test check timeout
+
+
+			c= At Calibration time only
+
+;    STATE EVENT DETECT FLAGS    [gEVTflags(gStateIdx)]
+;
+#Define	EVT_acc_gt_threshold		gTempEvents,0
+#Define	EVT_acc_lt_zero				gTempEvents,1
+#Define	EVT_vel_gt_threshold		gTempEvents,2
+#Define	EVT_vel_lt_threshold		gTempEvents,3
+#Define	EVT_vel_lt_zero				gTempEvents,4
+#Define	EVT_alt_gt_ceiling			gTempEvents,5
+#Define	EVT_alt_lt_peak				gTempEvents,6
+#Define	EVT_alt_lt_floor			gTempEvents,7
+#Define	EVT_aux_closed				gTempEvents+1,0
+#Define	EVT_aux_opened				gTempEvents+1,1
+#Define	EVT_Skip_Trigs				gTempEvents+1,2		//Valid only for states 1..7

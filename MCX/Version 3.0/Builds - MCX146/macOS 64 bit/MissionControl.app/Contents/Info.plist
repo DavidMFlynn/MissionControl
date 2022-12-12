@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+   <key>CFBundleExecutable</key>
+   <string>MissionControl</string>
+   <key>CFBundleName</key>
+   <string>MissionControl</string>
+   <key>CFBundleIdentifier</key>
+   <string>com.oxfordvue.MissionControl</string>
+   <key>CFBundleInfoDictionaryVersion</key>
+   <string>6.0</string>
+   <key>CFBundleVersion</key>
+   <string>3.0.3.3.18</string>
+   <key>CFBundleDevelopmentRegion</key>
+   <string>en</string>
+   <key>CFBundlePackageType</key>
+   <string>APPL</string>
+   <key>CFBundleSignature</key>
+   <string>????</string>
+   <key>NSHumanReadableCopyright</key>
+   <string>DMFE 2022</string>
+   <key>CFBundleShortVersionString</key>
+   <string>3.0.3</string>
+   <key>CFBundleIconFile</key>
+   <string>App</string>
+   <key>LSMinimumSystemVersion</key>
+   <string>10.10.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSRequiresAquaSystemAppearance</key><true/>
+<key>CFBundleSupportedPlatforms</key><array><string>MacOSX</string></array>
+   <key>CFBundleDocumentTypes</key>
+   <array>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>text/flt</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextFlt.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>flt</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Viewer</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>text/msc</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextMsc.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>msc</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Editor</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>text/raw</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextRaw.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>raw</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Viewer</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>Configuration</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextSetup.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>MCv3_Settings</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Editor</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>Flight Data</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextFlight.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>MCv3_Flight</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Viewer</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+      <dict>
+         <key>CFBundleTypeName</key>
+         <string>Raw Data</string>
+         <key>CFBundleTypeIconFile</key>
+         <string>TextData.icns</string>
+         <key>CFBundleTypeExtensions</key>
+         <array>
+            <string>MCv3_RawData</string>
+         </array>
+         <key>CFBundleTypeRole</key>
+         <string>Viewer</string>
+         <key>LSHandlerRank</key>
+         <string>Default</string>
+      </dict>
+   </array>
+
+</dict>
+</plist>
